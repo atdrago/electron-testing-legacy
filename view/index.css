@@ -1,0 +1,56 @@
+body {
+	width: 100%;
+	height: 100%;
+}
+
+div,
+div:before,
+div:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+div {
+	background-image: radial-gradient(circle at 50% 0%, #fff 0%, #ddd 100%);
+	border-radius: 100%;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+	
+	width: 86%; 
+	height: 86%; 
+}
+
+div:before {
+	content: '';
+	width: 91%;
+	height: 91%;
+	border-radius: 100%;
+	background-image: radial-gradient(circle at 50% 0%, #0BA692 0%, #026E77 100%);
+}
+
+div:after {
+	content: '';
+	opacity: 1;
+	background-color: #EBEBEB;
+	width: 33%;
+	height: 5.5%;
+	border-radius: 20px;
+}
+
+@media (max-width: 64px) {
+	div:before {
+		width: 90%;
+		height: 90%;
+	}
+}
+
+@media (max-width: 16px) {
+	div:after {
+		height: 1px;
+	}
+}
